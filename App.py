@@ -12,7 +12,6 @@ chats = {}  # Diccionario para almacenar los chats de cada cliente
 clientes_conectados = {}  # Diccionario de clientes conectados
 
 @app.route('/', methods=['GET', 'HEAD'])
-
 def client_page():
     return render_template('index.html')
 
