@@ -16,7 +16,7 @@ clientes_conectados = {}  # Diccionario de clientes conectados
 def client_page():
     return render_template('index.html')
 
-@app.route('/admin')
+@app.route('/admin', methods=['GET', 'HEAD'])
 def admin_page():
     return render_template('admin.html')
 
