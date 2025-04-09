@@ -4,6 +4,11 @@ import uuid
 import time
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return '¡Hola Mundo!'
+
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
