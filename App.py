@@ -11,7 +11,7 @@ socketio = SocketIO(app)
 chats = {}  # Diccionario para almacenar los chats de cada cliente
 clientes_conectados = {}  # Diccionario de clientes conectados
 
-@app.route('/')
+@app.route('/', methods=['GET', 'HEAD'])
 
 def home():
     return '¡Hola Mundo!'
