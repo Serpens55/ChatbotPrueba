@@ -5,10 +5,6 @@ import time
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return '¡Hola Mundo!'
-
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app)
 
@@ -16,6 +12,10 @@ chats = {}  # Diccionario para almacenar los chats de cada cliente
 clientes_conectados = {}  # Diccionario de clientes conectados
 
 @app.route('/')
+
+def home():
+    return '¡Hola Mundo!'
+
 def client_page():
     return render_template('index.html')
 
