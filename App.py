@@ -13,9 +13,6 @@ clientes_conectados = {}  # Diccionario de clientes conectados
 
 @app.route('/', methods=['GET', 'HEAD'])
 
-def home():
-    return '¡Hola Mundo!'
-
 def client_page():
     return render_template('index.html')
 
